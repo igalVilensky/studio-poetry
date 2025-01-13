@@ -1,4 +1,3 @@
-// schemaTypes/track.js
 import {defineField, defineType} from 'sanity'
 
 export const trackType = defineType({
@@ -19,12 +18,9 @@ export const trackType = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'audioFile',
-      type: 'file',
-      title: 'Audio File',
-      options: {
-        accept: 'audio/mpeg', // Only allow MP3 files
-      },
+      name: 'fileId',
+      type: 'string',
+      title: 'Google Drive File ID',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
